@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/assistants
+    body:
+      encoding: UTF-8
+      string: '{"instructions":"You are a personal math tutor. When asked a question,
+        write and run Ruby code to answer the question.","name":"assistant","tools":[{"type":"code_interpreter"}],"model":"invalid_model"}'
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin23 arm64) ruby/2.7.8p225
+      Authorization:
+      - Bearer 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
+      Openai-Beta:
+      - assistants=v1
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '201'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.openai.com
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Wed, 29 Nov 2023 06:29:07 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '179'
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-vusyt9awcxgem46fwwcmgyxl
+      X-Request-Id:
+      - c6dac57a5c30889ce66e5b08bda24339
+      Openai-Processing-Ms:
+      - '94'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=Iez8d4NM3fLPyt0CZ.Cq50ekU8S4eaD.KbBByXUxupA-1701239347-0-AWCam0JPhkj4nLuf9oJSgaTW32iywVt14iPea0LTZA/wl3bk9Q31nEqQKUaMZubGMZipgdlQNbrD/aCRKgF6D+U=;
+        path=/; expires=Wed, 29-Nov-23 06:59:07 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=S5tGet_9Q_RkByG34q3Y7Qo0QdOqM88mnh7yg4Dvk0g-1701239347730-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 82d8cb605a90a137-SIN
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "error": {
+            "message": "The requested model 'invalid_model' does not exist.",
+            "type": "invalid_request_error",
+            "param": "model",
+            "code": "model_not_found"
+          }
+        }
+  recorded_at: Wed, 29 Nov 2023 06:29:07 GMT
+recorded_with: VCR 6.2.0

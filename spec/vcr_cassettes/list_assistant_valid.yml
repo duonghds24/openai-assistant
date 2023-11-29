@@ -1,0 +1,201 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openai.com/v1/assistants
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin23 arm64) ruby/2.7.8p225
+      Authorization:
+      - Bearer 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
+      Openai-Beta:
+      - assistants=v1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.openai.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 29 Nov 2023 06:29:10 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-vusyt9awcxgem46fwwcmgyxl
+      X-Request-Id:
+      - 3c6dbad720d0765ad7b76118dcbd4ac5
+      Openai-Processing-Ms:
+      - '78'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=sPgahY7uVfgHnAA9oDltKDfC2eVY6hi9M8n0Ictt3l0-1701239350-0-AW0LUsBvtCKg7FRXagqAYRlOxKoi/WacmdzkCuZ0/MwwHezAZom3ekYchMKquWkj3LVINq5OrRSwAu+73/3O3HU=;
+        path=/; expires=Wed, 29-Nov-23 06:59:10 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=ocXJ6Fnrs39ep_fWyMTf5Y.pQgKXtESU36c6GXqs5Z8-1701239350259-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 82d8cb7049604dd4-SIN
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "object": "list",
+          "data": [
+            {
+              "id": "asst_1qYQxjqfenP9ItERS8QNOwm2",
+              "object": "assistant",
+              "created_at": 1701239346,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_GorW9z29HK9Obf8UolVuFD5t",
+              "object": "assistant",
+              "created_at": 1701238661,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_q22CPj56qnZhiWxgw1P9xOH7",
+              "object": "assistant",
+              "created_at": 1701238489,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_EqZw0WoVhRd3LVA3p0A9mn0t",
+              "object": "assistant",
+              "created_at": 1701238388,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_IOwzgXkabC8BMXukZeVz6QMA",
+              "object": "assistant",
+              "created_at": 1701238344,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_g6xibb57AkjuH7r4TA5J2I1W",
+              "object": "assistant",
+              "created_at": 1701238187,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_0n8grdvwqnx8wsdHh6mTQBrC",
+              "object": "assistant",
+              "created_at": 1701238042,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_tqwZmiJ3A237ieBFn47QoV1m",
+              "object": "assistant",
+              "created_at": 1701161959,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            }
+          ],
+          "first_id": "asst_1qYQxjqfenP9ItERS8QNOwm2",
+          "last_id": "asst_tqwZmiJ3A237ieBFn47QoV1m",
+          "has_more": false
+        }
+  recorded_at: Wed, 29 Nov 2023 06:29:10 GMT
+recorded_with: VCR 6.2.0
