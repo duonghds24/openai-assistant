@@ -2,7 +2,6 @@
 
 require_relative "assistant/version"
 require_relative "assistant_obj"
-require "uri"
 require "json"
 require "net/http"
 require "rest-client"
@@ -23,8 +22,6 @@ module Openai
     # @param api_key [String] The api key of openai
     def self.setup(api_key = "")
       @openai_api_key = api_key
-      # hard the host because if the official docs change the host, maybe it will change another
-      # we need to update this gem for any change
       @openai_url = "https://api.openai.com/v1/assistants"
     end
 
