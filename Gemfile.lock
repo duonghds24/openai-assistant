@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    openai-assistant (0.3.0)
+    openai-assistant (0.4.0)
 
 GEM
   remote: https://rubygems.org/
