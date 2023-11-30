@@ -11,8 +11,6 @@ gem "rspec", "~> 3.0"
 
 gem "rubocop", "~> 1.21"
 
-gem "rest-client"
-
 gem "vcr", "~> 6.2"
 
 gem "webmock", "~> 3.19"

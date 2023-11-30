@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "openai/base"
 require "openai/assistant"
 require "vcr"
 

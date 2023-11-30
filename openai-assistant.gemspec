@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require_relative "lib/openai/base"
 require_relative "lib/openai/assistant/version"
 
 Gem::Specification.new do |spec|

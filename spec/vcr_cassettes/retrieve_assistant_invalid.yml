@@ -2,15 +2,11 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.openai.com/v1/assistants/invalid_id
+    uri: http://api.openai.com:443/v1/assistants/invalid_id
     body:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept:
-      - "*/*"
-      User-Agent:
-      - rest-client/2.1.0 (darwin23 arm64) ruby/2.7.8p225
       Authorization:
       - Bearer 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
       Openai-Beta:
@@ -19,55 +15,31 @@ http_interactions:
       - application/json
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Host:
-      - api.openai.com
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 400
+      message: Bad Request
     headers:
-      Date:
-      - Wed, 29 Nov 2023 06:29:09 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Openai-Version:
-      - '2020-10-01'
-      Openai-Organization:
-      - user-vusyt9awcxgem46fwwcmgyxl
-      X-Request-Id:
-      - c121d42c5d1e6baa340e96d72e04b4f4
-      Openai-Processing-Ms:
-      - '71'
-      Strict-Transport-Security:
-      - max-age=15724800; includeSubDomains
-      Cf-Cache-Status:
-      - DYNAMIC
-      Set-Cookie:
-      - __cf_bm=zFKXcL3aOVhAhckcLWCn8zqi8meNVA5IJKczP9AV6p4-1701239349-0-AW202kWpmq89GgPrEblhe0W8fKAfYjHafzoX3vWWDCjiAKVWUmDzCWP+UupW4r8oPWzV72nO/xxpQ1CyKxB7o70=;
-        path=/; expires=Wed, 29-Nov-23 06:59:09 GMT; domain=.api.openai.com; HttpOnly;
-        Secure; SameSite=None
-      - _cfuvid=rxQp82sNgszYbh_2HWi6YRtOY_GSnNJ15lJmn9iL37Y-1701239349670-0-604800000;
-        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
+      Date:
+      - Thu, 30 Nov 2023 17:21:31 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '253'
+      Connection:
+      - close
       Cf-Ray:
-      - 82d8cb683919449b-SIN
-      Alt-Svc:
-      - h3=":443"; ma=86400
+      - "-"
     body:
-      encoding: ASCII-8BIT
-      string: |-
-        {
-          "error": {
-            "message": "No assistant found with id 'invalid_id'.",
-            "type": "invalid_request_error",
-            "param": null,
-            "code": null
-          }
-        }
-  recorded_at: Wed, 29 Nov 2023 06:29:09 GMT
+      encoding: UTF-8
+      string: "<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS
+        port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The
+        plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n"
+  recorded_at: Thu, 30 Nov 2023 17:21:31 GMT
 recorded_with: VCR 6.2.0

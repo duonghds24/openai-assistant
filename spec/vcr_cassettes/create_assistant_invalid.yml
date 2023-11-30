@@ -8,57 +8,53 @@ http_interactions:
       string: '{"instructions":"You are a personal math tutor. When asked a question,
         write and run Ruby code to answer the question.","name":"assistant","tools":[{"type":"code_interpreter"}],"model":"invalid_model"}'
     headers:
-      Accept:
-      - "*/*"
-      User-Agent:
-      - rest-client/2.1.0 (darwin23 arm64) ruby/2.7.8p225
       Authorization:
       - Bearer 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
       Openai-Beta:
       - assistants=v1
       Content-Type:
       - application/json
-      Content-Length:
-      - '201'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Host:
-      - api.openai.com
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
-      code: 400
-      message: Bad Request
+      code: 401
+      message: Unauthorized
     headers:
       Date:
-      - Wed, 29 Nov 2023 06:29:07 GMT
+      - Thu, 30 Nov 2023 17:21:31 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '179'
+      - '280'
       Connection:
       - keep-alive
+      Www-Authenticate:
+      - Basic realm="OpenAI API"
       Openai-Version:
       - '2020-10-01'
-      Openai-Organization:
-      - user-vusyt9awcxgem46fwwcmgyxl
       X-Request-Id:
-      - c6dac57a5c30889ce66e5b08bda24339
+      - d635804807c2aada2705d191c6cbcb2f
       Openai-Processing-Ms:
-      - '94'
+      - '9'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=Iez8d4NM3fLPyt0CZ.Cq50ekU8S4eaD.KbBByXUxupA-1701239347-0-AWCam0JPhkj4nLuf9oJSgaTW32iywVt14iPea0LTZA/wl3bk9Q31nEqQKUaMZubGMZipgdlQNbrD/aCRKgF6D+U=;
-        path=/; expires=Wed, 29-Nov-23 06:59:07 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=T5Dmf5AW7ACYnxqTUwFs6BT8Ar0Fvc6nogIaC9iQaOc-1701364891-0-AcZl2FwI7n/9Z3Gr2znxc+BdyYv4cyWBg0309q9MD8a0vwJJlxIvxXK7YiSo89pqPA/rJVvlrFw5Qpdpj70+xNY=;
+        path=/; expires=Thu, 30-Nov-23 17:51:31 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=S5tGet_9Q_RkByG34q3Y7Qo0QdOqM88mnh7yg4Dvk0g-1701239347730-0-604800000;
+      - _cfuvid=3AAlRYJYveoXAotj9mJhTqw37UQgOy_Wjl4OFR77ZLM-1701364891492-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 82d8cb605a90a137-SIN
+      - 82e4c46a78a96be2-SIN
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -66,11 +62,11 @@ http_interactions:
       string: |-
         {
           "error": {
-            "message": "The requested model 'invalid_model' does not exist.",
+            "message": "Incorrect API key provided: sk-5erk4***************************************WoY0. You can find your API key at https://platform.openai.com/account/api-keys.",
             "type": "invalid_request_error",
-            "param": "model",
-            "code": "model_not_found"
+            "param": null,
+            "code": "invalid_api_key"
           }
         }
-  recorded_at: Wed, 29 Nov 2023 06:29:07 GMT
+  recorded_at: Thu, 30 Nov 2023 17:21:31 GMT
 recorded_with: VCR 6.2.0
