@@ -30,11 +30,6 @@ module Openai
     # @return [Openai::AssistantObj] A new response object of assistant.
     def create_assistant(model, instructions)
       url = @openai_url
-      headers = {
-        "Authorization": "Bearer #{@openai_api_key}",
-        "OpenAI-Beta": "assistants=v1",
-        "Content-Type": "application/json"
-      }
       req_body = {
         "instructions": instructions,
         "name": "assistant",
@@ -42,7 +37,7 @@ module Openai
         "model": model
       }
       begin
-        resp = RestClient.post(url, req_body.to_json, headers)
+        resp = RestClient.post(url, req_body.to_json, default_headers)
       rescue RestClient::ExceptionWithResponse => e
         resp = e.response
       end
@@ -57,13 +52,8 @@ module Openai
     # @return [Openai::AssistantObj] A new response object of assistant.
     def retrieve_assistant(assistant_id)
       url = "#{@openai_url}/#{assistant_id}"
-      headers = {
-        "Authorization": "Bearer #{@openai_api_key}",
-        "OpenAI-Beta": "assistants=v1",
-        "Content-Type": "application/json"
-      }
       begin
-        resp = RestClient.get(url, headers)
+        resp = RestClient.get(url, default_headers)
       rescue RestClient::ExceptionWithResponse => e
         resp = e.response
       end
@@ -78,13 +68,8 @@ module Openai
     # @return [String] Message delete the assistant ok or not
     def delete_assistant(assistant_id)
       url = "#{@openai_url}/#{assistant_id}"
-      headers = {
-        "Authorization": "Bearer #{@openai_api_key}",
-        "OpenAI-Beta": "assistants=v1",
-        "Content-Type": "application/json"
-      }
       begin
-        resp = RestClient.delete(url, headers)
+        resp = RestClient.delete(url, default_headers)
       rescue RestClient::ExceptionWithResponse => e
         resp = e.response
       end
@@ -97,13 +82,8 @@ module Openai
     # @return [Array<Openai::AssistantObj>] List all assistant
     def list_assistant
       url = @openai_url
-      headers = {
-        "Authorization": "Bearer #{@openai_api_key}",
-        "OpenAI-Beta": "assistants=v1",
-        "Content-Type": "application/json"
-      }
       begin
-        resp = RestClient.get(url, headers)
+        resp = RestClient.get(url, default_headers)
       rescue RestClient::ExceptionWithResponse => e
         resp = e.response
       end
@@ -130,6 +110,14 @@ module Openai
         file_ids: data["file_ids"],
         metadata: data["metadata"]
       )
+    end
+
+    def default_headers
+      {
+        "Authorization": "Bearer #{@openai_api_key}",
+        "OpenAI-Beta": "assistants=v1",
+        "Content-Type": "application/json"
+      }
     end
   end
 end
