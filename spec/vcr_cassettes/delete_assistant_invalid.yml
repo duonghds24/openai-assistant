@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: delete
-    uri: http://api.openai.com:443/v1/assistants/invalid_id
+    uri: https://api.openai.com/v1/assistants/invalid_id
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Authorization:
-      - Bearer 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
+      - Bearer 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
       Openai-Beta:
       - assistants=v1
       Content-Type:
@@ -21,25 +21,51 @@ http_interactions:
       - Ruby
   response:
     status:
-      code: 400
-      message: Bad Request
+      code: 404
+      message: Not Found
     headers:
+      Date:
+      - Thu, 30 Nov 2023 18:18:59 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-lr17ucjtedcdrdzslupysvb8
+      X-Request-Id:
+      - b66b802456914646d215dc91675eab4f
+      Openai-Processing-Ms:
+      - '69'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=rL_eYBLm1TC15lI6ORZMDeO5Y9cqtQhIkBFuZPnNTE4-1701368339-0-AYOuwsa3rVQ7YB1ktBTlS54fqavqzBuFPXIDGwSV9hYFNY8NGG6/ZiQA3opeIt8eQHbkOLlTe3kBubFJBkl9/6E=;
+        path=/; expires=Thu, 30-Nov-23 18:48:59 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=FV4C4tFy5G4Xjz3vNlv.utXcn5GeP2fdiuwMIKgvRhg-1701368339842-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
-      Date:
-      - Thu, 30 Nov 2023 17:21:32 GMT
-      Content-Type:
-      - text/html
-      Content-Length:
-      - '253'
-      Connection:
-      - close
       Cf-Ray:
-      - "-"
+      - 82e5189a3d715ce7-SIN
+      Alt-Svc:
+      - h3=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: "<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS
-        port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The
-        plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n"
-  recorded_at: Thu, 30 Nov 2023 17:21:32 GMT
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "message": "No assistant found with id 'invalid_id'.",
+            "type": "invalid_request_error",
+            "param": null,
+            "code": null
+          }
+        }
+  recorded_at: Thu, 30 Nov 2023 18:18:59 GMT
 recorded_with: VCR 6.2.0

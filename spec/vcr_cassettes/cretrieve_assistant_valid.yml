@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.openai.com/v1/assistants/invalid_id
+    uri: https://api.openai.com/v1/assistants/asst_5a8NF6Iml1XxFffChnl9FToX
     body:
       encoding: US-ASCII
       string: ''
@@ -21,8 +21,8 @@ http_interactions:
       - Ruby
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
       Date:
       - Thu, 30 Nov 2023 18:18:58 GMT
@@ -37,35 +37,43 @@ http_interactions:
       Openai-Organization:
       - user-lr17ucjtedcdrdzslupysvb8
       X-Request-Id:
-      - 012d8287e06052e2a84a9e44c34f107e
+      - 46861443b49a72ae6ef72337baa65ae9
       Openai-Processing-Ms:
-      - '74'
+      - '82'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=z1I444NDFY0Lb_AjHx8kwdhGClrs1s5ANVAkr_BPW3s-1701368338-0-AcqytTIG6n3KZssmf9E4cSs5cLN8uuY0DxUzD9qfqxTP+LsyGpT8tiUyhe+omoZcaGXJ/jOHi4Fy299SqSYWmlU=;
+      - __cf_bm=mgeu06VA7tjg5.iAFUznA1VwTFxwiuI32R7Kov6dzts-1701368338-0-Aa7Dhl+C7nZGMIDYW6RCRiu+wXYfQYhId6/pWXVOLrDWvErjgVYOp8IYbDzKvDCYbZDZGQ5Ii591pdzC53sMWvI=;
         path=/; expires=Thu, 30-Nov-23 18:48:58 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=7SJs_oykLjeWtC5XOo83GqpdacGZ3b0BEd1AAoTQZSo-1701368338602-0-604800000;
+      - _cfuvid=f4J6bBaQTIqOvl7sfH_VFZ38GNXiwqlJVYY7cGe0aq8-1701368338186-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 82e5189279d24042-SIN
+      - 82e5188fca0d4b92-SIN
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "error": {
-            "message": "No assistant found with id 'invalid_id'.",
-            "type": "invalid_request_error",
-            "param": null,
-            "code": null
-          }
+          "id": "asst_5a8NF6Iml1XxFffChnl9FToX",
+          "object": "assistant",
+          "created_at": 1701368337,
+          "name": "assistant",
+          "description": null,
+          "model": "gpt-3.5-turbo",
+          "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+          "tools": [
+            {
+              "type": "code_interpreter"
+            }
+          ],
+          "file_ids": [],
+          "metadata": {}
         }
   recorded_at: Thu, 30 Nov 2023 18:18:58 GMT
 recorded_with: VCR 6.2.0

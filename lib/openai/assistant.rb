@@ -3,6 +3,7 @@
 require_relative "assistant/version"
 require_relative "assistant_obj"
 require_relative "base"
+require_relative "../http/http"
 require "json"
 require "net/http"
 require "uri"
@@ -24,7 +25,6 @@ module Openai
     # @param instructions [String] The system instructions that the assistant uses.
     # @return [Openai::AssistantObj] A new response object of assistant.
     def create_assistant(model, instructions)
-      puts default_headers
       url = URI.parse(@openai_url)
       req_body = {
         "instructions": instructions,
@@ -32,9 +32,11 @@ module Openai
         "tools": [{ "type": "code_interpreter" }],
         "model": model
       }.to_json
-      response = call_post(url, req_body)
-      return response["error"]["code"] unless response["error"].nil?
-
+      response = @http_client.call_post(url, req_body, default_headers)
+      unless response.code == "200"
+        parsed = JSON.parse(response.body)
+        return parsed["error"]["code"]
+      end
       parse_assistant_object(JSON.parse(response.body))
     end
 
@@ -43,9 +45,11 @@ module Openai
     def retrieve_assistant(assistant_id)
       url = "#{@openai_url}/#{assistant_id}"
       uri = URI(url)
-      response = call_post(uri, nil)
-      return response["error"]["code"] unless response["error"].nil?
-
+      response = @http_client.call_get(uri, default_headers)
+      unless response.code == "200"
+        parsed = JSON.parse(response.body)
+        return parsed["error"]["code"]
+      end
       parse_assistant_object(JSON.parse(response.body))
     end
 
@@ -54,10 +58,9 @@ module Openai
     def delete_assistant(assistant_id)
       url = "#{@openai_url}/#{assistant_id}"
       uri = URI(url)
-      response = call_post(uri, nil)
-      return response["error"]["code"] unless response["error"].nil?
-
+      response = @http_client.call_delete(uri, default_headers)
       parsed = JSON.parse(response.body)
+      return parsed["error"]["code"] unless response.code == "200"
 
       parsed["deleted"]
     end
@@ -66,17 +69,18 @@ module Openai
     def list_assistant
       url = @openai_url
       uri = URI(url)
-      response = call_get(uri)
-      return response["error"]["code"] unless response["error"].nil?
-
+      response = @http_client.call_get(uri, default_headers)
       parsed = JSON.parse(response.body)
+      return parsed["error"]["code"] unless response.code == "200"
+
       assistants = []
       parsed["data"].each do |ast|
         assistants << parse_assistant_object(ast)
       end
     end
 
-    # @return private
+    private
+
     def parse_assistant_object(data)
       Openai::AssistantObj.new(
         id: data["id"],
@@ -98,29 +102,6 @@ module Openai
         "OpenAI-Beta": "assistants=v1",
         "Content-Type": "application/json"
       }
-    end
-
-    def call_post(url, req_body)
-      uri = URI(url)
-      http = Net::HTTP.new(uri.host, uri.port)
-      request = Net::HTTP::Post.new(uri.path, default_headers)
-      request.body = req_body
-      response = http.request(request)
-      parsed = JSON.parse(response.body)
-      return parsed["error"]["code"] unless response.code == "200"
-
-      parsed
-    end
-
-    def call_get(url)
-      uri = URI(url)
-      http = Net::HTTP.new(uri.host, uri.port)
-      request = Net::HTTP::Get.new(uri.path, default_headers)
-      response = http.request(request)
-      parsed = JSON.parse(response.body)
-      return parsed["error"]["code"] unless response.code == "200"
-
-      parsed
     end
   end
 end

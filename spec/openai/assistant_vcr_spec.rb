@@ -4,7 +4,7 @@
 
 RSpec.describe Openai::Assistant do
   $assistant = nil # keep the response after create for another method like retrieve, delete,...
-  subject { described_class.new("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") } # need to use real api first to generate the vcr_cassettes with real data
+  subject { described_class.new("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") } # need to use real api first to generate the vcr_cassettes with real data
   describe ".create_assistant" do
     context "with valid parameters" do
       it "creates an assistant" do

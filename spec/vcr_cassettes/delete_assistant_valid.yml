@@ -1,8 +1,8 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://api.openai.com/v1/assistants/invalid_id
+    method: delete
+    uri: https://api.openai.com/v1/assistants/asst_5a8NF6Iml1XxFffChnl9FToX
     body:
       encoding: US-ASCII
       string: ''
@@ -21,11 +21,11 @@ http_interactions:
       - Ruby
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
       Date:
-      - Thu, 30 Nov 2023 18:18:58 GMT
+      - Thu, 30 Nov 2023 18:18:59 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -37,35 +37,32 @@ http_interactions:
       Openai-Organization:
       - user-lr17ucjtedcdrdzslupysvb8
       X-Request-Id:
-      - 012d8287e06052e2a84a9e44c34f107e
+      - 7a0a2f789d31856eb073b3d5c3b7bc29
       Openai-Processing-Ms:
-      - '74'
+      - '84'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=z1I444NDFY0Lb_AjHx8kwdhGClrs1s5ANVAkr_BPW3s-1701368338-0-AcqytTIG6n3KZssmf9E4cSs5cLN8uuY0DxUzD9qfqxTP+LsyGpT8tiUyhe+omoZcaGXJ/jOHi4Fy299SqSYWmlU=;
-        path=/; expires=Thu, 30-Nov-23 18:48:58 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=JiRGkmnZ76HoATayCTaywTlm6ZaMQnYtSX5by3yBqag-1701368339-0-AedYDuUJ5LiVRRFN5K/21H48HtIbu98pNkFeINwQmEqJLJvCFrtjrBINVGPZrcKKQJlmfmkmlvtM17ysxAq8ap8=;
+        path=/; expires=Thu, 30-Nov-23 18:48:59 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=7SJs_oykLjeWtC5XOo83GqpdacGZ3b0BEd1AAoTQZSo-1701368338602-0-604800000;
+      - _cfuvid=Ne1bYKtsqnFYE6heheLAMxGuZRMitdjmdvqx3olfWv0-1701368339441-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 82e5189279d24042-SIN
+      - 82e51897a9185f41-SIN
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "error": {
-            "message": "No assistant found with id 'invalid_id'.",
-            "type": "invalid_request_error",
-            "param": null,
-            "code": null
-          }
+          "id": "asst_5a8NF6Iml1XxFffChnl9FToX",
+          "object": "assistant.deleted",
+          "deleted": true
         }
-  recorded_at: Thu, 30 Nov 2023 18:18:58 GMT
+  recorded_at: Thu, 30 Nov 2023 18:18:59 GMT
 recorded_with: VCR 6.2.0
