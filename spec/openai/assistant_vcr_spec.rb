@@ -13,7 +13,7 @@ RSpec.describe Openai::Assistant do
     assistant
   end
 
-  describe ".create_assistant" do
+  describe "#create_assistant" do
     context "with valid parameters" do
       it "creates an assistant" do
         VCR.use_cassette("create_assistant_valid") do
@@ -38,7 +38,7 @@ RSpec.describe Openai::Assistant do
     end
   end
 
-  describe ".retrieve_assistant" do
+  describe "#retrieve_assistant" do
     context "with valid assistant_id" do
       it "retrieves the assistant" do
         VCR.use_cassette("cretrieve_assistant_valid") do
@@ -61,7 +61,7 @@ RSpec.describe Openai::Assistant do
     end
   end
 
-  describe ".list_assistant" do
+  describe "#list_assistant" do
     context "with valid parameters" do
       it "returns a list of assistants" do
         VCR.use_cassette("list_assistant_valid") do
@@ -73,7 +73,7 @@ RSpec.describe Openai::Assistant do
     end
   end
 
-  describe ".delete_assistant" do
+  describe "#delete_assistant" do
     context "with valid assistant_id" do
       it "deletes the assistant" do
         VCR.use_cassette("delete_assistant_valid") do
