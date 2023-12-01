@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.openai.com/v1/assistants/asst_tXQlJqhCVXsBIb8OS5EyemFH
+    uri: https://api.openai.com/v1/assistants/asst_wBrQ3SD4pH3D7wfzKOFtCnm7
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Authorization:
-      - Bearer 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
+      - Bearer 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
       Openai-Beta:
       - assistants=v1
       Content-Type:
@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 01 Dec 2023 07:22:00 GMT
+      - Fri, 01 Dec 2023 07:31:48 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -37,32 +37,32 @@ http_interactions:
       Openai-Organization:
       - user-lr17ucjtedcdrdzslupysvb8
       X-Request-Id:
-      - a774c4c9f4efb63e06662f179b040875
+      - 219e75178c893a379f85a8763897773c
       Openai-Processing-Ms:
-      - '78'
+      - '79'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=B25BEEhQAK.dJRYsPpXAXT_ouAinIdjrwU6WZagjXXU-1701415320-0-AauzJutgimHJfiyCUCbnpvUeJwT4i17ZgrTMK38fupNOcyuL9ZDgwDOaZwWhrJJwNVWLaBgDFJP7r7PfVLw+hX4=;
-        path=/; expires=Fri, 01-Dec-23 07:52:00 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=V1U9Q018cN1LdgnrlDaAh8NVeloSbQ6RA3QwhGVgdBs-1701415908-0-AaBeIKPg/s/sjKn3qc+bXhnAMcJArExDWo2pYLDHHYd23cfi5W7bCeoNUT8to6XyiNB/h3tOE3Z6uM1etbsLEkE=;
+        path=/; expires=Fri, 01-Dec-23 08:01:48 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=szBSXT3nM9sAhDDej55aIKQkeajNRlEM0JzXgatBn2E-1701415320331-0-604800000;
+      - _cfuvid=7Gl6IVIRLZKD.YGoDuI4LB_p8bDZZ9prcfYiMyQIfb4-1701415908989-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 82e993964bf040e9-SIN
+      - 82e9a1f55b7287ef-SIN
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_tXQlJqhCVXsBIb8OS5EyemFH",
+          "id": "asst_wBrQ3SD4pH3D7wfzKOFtCnm7",
           "object": "assistant",
-          "created_at": 1701415318,
+          "created_at": 1701415907,
           "name": "assistant",
           "description": null,
           "model": "gpt-3.5-turbo",
@@ -75,5 +75,5 @@ http_interactions:
           "file_ids": [],
           "metadata": {}
         }
-  recorded_at: Fri, 01 Dec 2023 07:22:00 GMT
+  recorded_at: Fri, 01 Dec 2023 07:31:48 GMT
 recorded_with: VCR 6.2.0

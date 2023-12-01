@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Openai::Assistant do
-  subject { described_class.new("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") } # need to use real api first to generate the vcr_cassettes with real data
+  subject { described_class.new("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") } # need to use real api first to generate the vcr_cassettes with real data
   let(:model) { "gpt-3.5-turbo" }
   let(:instructions) { "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question." }
   let(:assistant) do # keep the response after create for another method like retrieve, delete,...

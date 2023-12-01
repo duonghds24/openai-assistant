@@ -9,7 +9,7 @@ http_interactions:
         write and run Ruby code to answer the question.","name":"assistant","tools":[{"type":"code_interpreter"}],"model":"gpt-3.5-turbo"}'
     headers:
       Authorization:
-      - Bearer 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
+      - Bearer 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
       Openai-Beta:
       - assistants=v1
       Content-Type:
@@ -26,7 +26,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 01 Dec 2023 07:21:59 GMT
+      - Fri, 01 Dec 2023 07:31:48 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -38,32 +38,32 @@ http_interactions:
       Openai-Organization:
       - user-lr17ucjtedcdrdzslupysvb8
       X-Request-Id:
-      - f522c979a6c8ccb3ee40856a62db49a2
+      - 77a4b2a5246023a3cb09168a9eed3580
       Openai-Processing-Ms:
-      - '56'
+      - '62'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=UuuC7Hixo_DfpZdUncGkvloKsT4v2_vBrb0EgB.QYKU-1701415319-0-AXs53ElTL6sKSM4oLY6vkuFCoHLEe7/EbPEcuBPmsZb7m0xEVGLGV5coa8e/EMHe87Yku27X/uhxoDcEpM5XoHA=;
-        path=/; expires=Fri, 01-Dec-23 07:51:59 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=6V9Cjd0vkFkw7qdWmMx5NDbLZqWrFyu_ssjEVYg4s_E-1701415908-0-AZilvQgsHcKRCN/opVHjWEPtLhQZIGdKvC8pSX6f1YUJjjEKGVgORTkvuvICj8MQmMO9IohyhXJE6cdn5h8cKS4=;
+        path=/; expires=Fri, 01-Dec-23 08:01:48 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=FI3.oJASK9XW3QPO0W3QMs9pLeGzwq.FvQjtIctvOqw-1701415319498-0-604800000;
+      - _cfuvid=iWF9qKMoe9xoO7TsbiG3UqKXl4uS2GhC604_jjoYfyg-1701415908151-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 82e993912fe86028-SIN
+      - 82e9a1f03eaa5ff0-SIN
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_1GU8fNq3b5P9ASflkHQ125pc",
+          "id": "asst_tpZ2lqS51dlZKnMpR1HTELu2",
           "object": "assistant",
-          "created_at": 1701415319,
+          "created_at": 1701415908,
           "name": "assistant",
           "description": null,
           "model": "gpt-3.5-turbo",
@@ -76,5 +76,5 @@ http_interactions:
           "file_ids": [],
           "metadata": {}
         }
-  recorded_at: Fri, 01 Dec 2023 07:21:59 GMT
+  recorded_at: Fri, 01 Dec 2023 07:31:48 GMT
 recorded_with: VCR 6.2.0
