@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Bearer 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
+      - Bearer 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
       Openai-Beta:
       - assistants=v1
       Content-Type:
@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 30 Nov 2023 18:18:59 GMT
+      - Fri, 01 Dec 2023 07:22:01 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -37,23 +37,23 @@ http_interactions:
       Openai-Organization:
       - user-lr17ucjtedcdrdzslupysvb8
       X-Request-Id:
-      - 2524843a184bba2ed7129adf9c6ffd95
+      - 0f85d39b75f8c1ac93c53824d955277e
       Openai-Processing-Ms:
-      - '79'
+      - '33'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=la0JOrEJsDdegBVwnqtaR_06dnr8M1d_aopNZP2pcaQ-1701368339-0-AWDUG3/uHYQ8FbdoeM8+WX6Am0Rf/BHt+p3gEGbmBj0/9X/Fdky59RF7hCBo313cJS4v8yITXYBkwko0KUXcQSE=;
-        path=/; expires=Thu, 30-Nov-23 18:48:59 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=DuZFCBWk0TC3tJlwwv10y4AvAtL_FOcsMAIuAOM56tU-1701415321-0-AQ1kW2EcdxZZlqy9bYiIZ1NRfv7gzKxsEYy71lByy8iZF18T+RnDRENvSlKm3EnbM8OBKVef91DtDlXo8WKxFX0=;
+        path=/; expires=Fri, 01-Dec-23 07:52:01 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=5Q9Jg.FzrDbw5C3vKXEL0ofIFotlqApgjVlCqDoVNAE-1701368339025-0-604800000;
+      - _cfuvid=jJSpb1_HDjNmjD3fqQfbZn.QSXK1WgHi1FjNSsimcKY-1701415321041-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 82e518951d513f9b-SIN
+      - 82e9939af9fe40f7-SIN
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -63,9 +63,89 @@ http_interactions:
           "object": "list",
           "data": [
             {
-              "id": "asst_5a8NF6Iml1XxFffChnl9FToX",
+              "id": "asst_1GU8fNq3b5P9ASflkHQ125pc",
               "object": "assistant",
-              "created_at": 1701368337,
+              "created_at": 1701415319,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_tXQlJqhCVXsBIb8OS5EyemFH",
+              "object": "assistant",
+              "created_at": 1701415318,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_xFzvTfV9LON4jA8p1WE32LTq",
+              "object": "assistant",
+              "created_at": 1701415298,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_IpR78wZFY3f4JUo80nzXDrb3",
+              "object": "assistant",
+              "created_at": 1701415264,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_iQFbX60m1ixXvlBDjNSHsVcu",
+              "object": "assistant",
+              "created_at": 1701415227,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_zLvJkozSliPNazhe6nJlvNo2",
+              "object": "assistant",
+              "created_at": 1701415027,
               "name": "assistant",
               "description": null,
               "model": "gpt-3.5-turbo",
@@ -267,9 +347,9 @@ http_interactions:
               "metadata": {}
             }
           ],
-          "first_id": "asst_5a8NF6Iml1XxFffChnl9FToX",
+          "first_id": "asst_1GU8fNq3b5P9ASflkHQ125pc",
           "last_id": "asst_y5M163A0hMwcD6zy3BS9tyAr",
           "has_more": false
         }
-  recorded_at: Thu, 30 Nov 2023 18:18:59 GMT
+  recorded_at: Fri, 01 Dec 2023 07:22:01 GMT
 recorded_with: VCR 6.2.0

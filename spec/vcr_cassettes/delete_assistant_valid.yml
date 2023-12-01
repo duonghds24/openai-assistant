@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://api.openai.com/v1/assistants/asst_5a8NF6Iml1XxFffChnl9FToX
+    uri: https://api.openai.com/v1/assistants/asst_tXQlJqhCVXsBIb8OS5EyemFH
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Authorization:
-      - Bearer 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
+      - Bearer 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
       Openai-Beta:
       - assistants=v1
       Content-Type:
@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 30 Nov 2023 18:18:59 GMT
+      - Fri, 01 Dec 2023 07:22:01 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -37,32 +37,32 @@ http_interactions:
       Openai-Organization:
       - user-lr17ucjtedcdrdzslupysvb8
       X-Request-Id:
-      - 7a0a2f789d31856eb073b3d5c3b7bc29
+      - '0197fb76244cc031f95283a7fe316898'
       Openai-Processing-Ms:
-      - '84'
+      - '88'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=JiRGkmnZ76HoATayCTaywTlm6ZaMQnYtSX5by3yBqag-1701368339-0-AedYDuUJ5LiVRRFN5K/21H48HtIbu98pNkFeINwQmEqJLJvCFrtjrBINVGPZrcKKQJlmfmkmlvtM17ysxAq8ap8=;
-        path=/; expires=Thu, 30-Nov-23 18:48:59 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=DfR8u0gPonEWrArc8BQSnDSFr6eVpbLJBxu.4fjXoHY-1701415321-0-AcPJYD5CnV9Zl1GTdGeReUejmo+cqxg8mKYbM68X9M99XN1KjZwUH70UpXnA4WotAltEA9x1OCqmjHs8846Hzcw=;
+        path=/; expires=Fri, 01-Dec-23 07:52:01 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=Ne1bYKtsqnFYE6heheLAMxGuZRMitdjmdvqx3olfWv0-1701368339441-0-604800000;
+      - _cfuvid=AZuwdui0A_P9sYuwd35Fj8Lh0qwxtLZk1.5VZDwSYrk-1701415321489-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 82e51897a9185f41-SIN
+      - 82e9939d49595fda-SIN
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_5a8NF6Iml1XxFffChnl9FToX",
+          "id": "asst_tXQlJqhCVXsBIb8OS5EyemFH",
           "object": "assistant.deleted",
           "deleted": true
         }
-  recorded_at: Thu, 30 Nov 2023 18:18:59 GMT
+  recorded_at: Fri, 01 Dec 2023 07:22:01 GMT
 recorded_with: VCR 6.2.0
