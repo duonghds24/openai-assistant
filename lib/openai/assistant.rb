@@ -2,6 +2,7 @@
 
 require_relative "assistant/version"
 require_relative "assistant_obj"
+require_relative "error_response"
 require_relative "base"
 require_relative "../http/http"
 require "json"
@@ -11,7 +12,7 @@ require "uri"
 module Openai
   # An openai assistant
   class Assistant < Base
-    # @param api_key [String] The api key of openai\
+    # @param api_key [String] The api key of openai
     def initialize(api_key = "")
       super(api_key)
     end
@@ -33,11 +34,9 @@ module Openai
         "model": model
       }.to_json
       response = @http_client.call_post(url, req_body, default_headers)
-      unless response.code == "200"
-        parsed = JSON.parse(response.body)
-        return parsed["error"]["code"]
-      end
-      parse_assistant_object(JSON.parse(response.body))
+      return Openai::ErrorResponse.from_json(response.body) unless response.code == "200"
+
+      Openai::AssistantObj.from_json(JSON.parse(response.body))
     end
 
     # @param assistant_id [String] The id of assistant after create
@@ -46,11 +45,9 @@ module Openai
       url = "#{@openai_url}/#{assistant_id}"
       uri = URI(url)
       response = @http_client.call_get(uri, default_headers)
-      unless response.code == "200"
-        parsed = JSON.parse(response.body)
-        return parsed["error"]["code"]
-      end
-      parse_assistant_object(JSON.parse(response.body))
+      return Openai::ErrorResponse.from_json(response.body) unless response.code == "200"
+
+      Openai::AssistantObj.from_json(JSON.parse(response.body))
     end
 
     # @param assistant_id [String] The id of assistant after create
@@ -59,10 +56,9 @@ module Openai
       url = "#{@openai_url}/#{assistant_id}"
       uri = URI(url)
       response = @http_client.call_delete(uri, default_headers)
-      parsed = JSON.parse(response.body)
-      return parsed["error"]["code"] unless response.code == "200"
+      return Openai::ErrorResponse.from_json(response.body) unless response.code == "200"
 
-      parsed["deleted"]
+      true
     end
 
     # @return [Array<Openai::AssistantObj>] List all assistant
@@ -70,31 +66,16 @@ module Openai
       url = @openai_url
       uri = URI(url)
       response = @http_client.call_get(uri, default_headers)
-      parsed = JSON.parse(response.body)
-      return parsed["error"]["code"] unless response.code == "200"
+      return Openai::ErrorResponse.from_json(response.body) unless response.code == "200"
 
+      parsed = JSON.parse(response.body)
       assistants = []
       parsed["data"].each do |ast|
-        assistants << parse_assistant_object(ast)
+        assistants << Openai::AssistantObj.from_json(ast)
       end
     end
 
     private
-
-    def parse_assistant_object(data)
-      Openai::AssistantObj.new(
-        id: data["id"],
-        object: data["object"],
-        created_at: data["created_at"],
-        name: data["name"],
-        description: data["description"],
-        model: data["model"],
-        instructions: data["instructions"],
-        tools: data["tools"],
-        file_ids: data["file_ids"],
-        metadata: data["metadata"]
-      )
-    end
 
     def default_headers
       {

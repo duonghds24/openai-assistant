@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Bearer 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
+      - Bearer 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
       Openai-Beta:
       - assistants=v1
       Content-Type:
@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 01 Dec 2023 07:31:49 GMT
+      - Fri, 01 Dec 2023 09:53:57 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -37,23 +37,23 @@ http_interactions:
       Openai-Organization:
       - user-lr17ucjtedcdrdzslupysvb8
       X-Request-Id:
-      - c047a36921b74c7ff5fb71637a48d483
+      - fbeead17f1e5f2410c00af050599e296
       Openai-Processing-Ms:
-      - '83'
+      - '19'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=odHCOJtI2P1DbqG8cdePJOujOiTd._Sj_vegR2jws44-1701415909-0-AZsoBCDVFD3jy1WE9tuNnXkR+oGR/2E9AnfWezoDXHNKTzTl/QgnQ+CFE33fKSxmREoDGnbAZUDdLCdPwxRzUpI=;
-        path=/; expires=Fri, 01-Dec-23 08:01:49 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=E4rAf7gr89fKZsLHh3o5QgCSQ8F6JnaSC1QkGLhpxb4-1701424437-0-AViLB9FYuIOXl3g/sNGLa92WR2MCiTlB6YRoJEEcNqJvAS67Gpfh+znCVq8AUP9vmNejvUlaDOuVIwapjJXNBT8=;
+        path=/; expires=Fri, 01-Dec-23 10:23:57 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=TVj5K.MCZ59umhF3ckyr3R4L.F2YAiJLQzU30O2ZOU4-1701415909817-0-604800000;
+      - _cfuvid=dPhkq0gyKOdcRSDnDMbe7_2.JZ3tmwuAYunSt28zhWg-1701424437201-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 82e9a1fa69af3dee-SIN
+      - 82ea722b188c4a29-SIN
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -63,9 +63,9 @@ http_interactions:
           "object": "list",
           "data": [
             {
-              "id": "asst_tpZ2lqS51dlZKnMpR1HTELu2",
+              "id": "asst_ORdKV3nCiN8WwtpfOqvpT3jn",
               "object": "assistant",
-              "created_at": 1701415908,
+              "created_at": 1701424435,
               "name": "assistant",
               "description": null,
               "model": "gpt-3.5-turbo",
@@ -79,9 +79,217 @@ http_interactions:
               "metadata": {}
             },
             {
-              "id": "asst_wBrQ3SD4pH3D7wfzKOFtCnm7",
+              "id": "asst_BrSJdHQUiM76v1VLLYfQrcVS",
               "object": "assistant",
-              "created_at": 1701415907,
+              "created_at": 1701424435,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_pFf6XMgQECuXuMu4bAFncEua",
+              "object": "assistant",
+              "created_at": 1701424398,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_lH1O6hhQYWM1dYa78b6MRYDR",
+              "object": "assistant",
+              "created_at": 1701423873,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_eUNn6W93bVZfRJGX4xH84Hto",
+              "object": "assistant",
+              "created_at": 1701423711,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_9bjsrv2Rt8rkfAOKIhRgXsMK",
+              "object": "assistant",
+              "created_at": 1701423656,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_LqF1B9MXOaRgH9kKAMxudPPH",
+              "object": "assistant",
+              "created_at": 1701423588,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_L6SM8B5itbQCrn82KsN0lEC6",
+              "object": "assistant",
+              "created_at": 1701423563,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_qeQ8G3O07LtPzi3lJGRhbt9m",
+              "object": "assistant",
+              "created_at": 1701423305,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_KSn1Urd4E2JqtVtzU003UeDn",
+              "object": "assistant",
+              "created_at": 1701423276,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_1Nc9eTMottLq8QnaMLtE8bh8",
+              "object": "assistant",
+              "created_at": 1701422347,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_UVg9w02WujpSH9I9LGKNJmkQ",
+              "object": "assistant",
+              "created_at": 1701419176,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_rtT9gnmVPlVBhORgjdtEaDeU",
+              "object": "assistant",
+              "created_at": 1701418705,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_PsC6y9Q1K8eakonsp33bwaxb",
+              "object": "assistant",
+              "created_at": 1701417888,
+              "name": "assistant",
+              "description": null,
+              "model": "gpt-3.5-turbo",
+              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+              "tools": [
+                {
+                  "type": "code_interpreter"
+                }
+              ],
+              "file_ids": [],
+              "metadata": {}
+            },
+            {
+              "id": "asst_tpZ2lqS51dlZKnMpR1HTELu2",
+              "object": "assistant",
+              "created_at": 1701415908,
               "name": "assistant",
               "description": null,
               "model": "gpt-3.5-turbo",
@@ -173,199 +381,11 @@ http_interactions:
               ],
               "file_ids": [],
               "metadata": {}
-            },
-            {
-              "id": "asst_gBBkUgaggvb0eiZx5ReBlzqx",
-              "object": "assistant",
-              "created_at": 1701368298,
-              "name": "assistant",
-              "description": null,
-              "model": "gpt-3.5-turbo",
-              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
-              "tools": [
-                {
-                  "type": "code_interpreter"
-                }
-              ],
-              "file_ids": [],
-              "metadata": {}
-            },
-            {
-              "id": "asst_dLbbHOP5EumilBipPII7CtTr",
-              "object": "assistant",
-              "created_at": 1701367286,
-              "name": "assistant",
-              "description": null,
-              "model": "gpt-3.5-turbo",
-              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
-              "tools": [
-                {
-                  "type": "code_interpreter"
-                }
-              ],
-              "file_ids": [],
-              "metadata": {}
-            },
-            {
-              "id": "asst_R74oIas1o29jBGtKu8rQEnfW",
-              "object": "assistant",
-              "created_at": 1701367195,
-              "name": "assistant",
-              "description": null,
-              "model": "gpt-3.5-turbo",
-              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
-              "tools": [
-                {
-                  "type": "code_interpreter"
-                }
-              ],
-              "file_ids": [],
-              "metadata": {}
-            },
-            {
-              "id": "asst_9GSlwC0Z8FExq8CJE2x0utdk",
-              "object": "assistant",
-              "created_at": 1701367179,
-              "name": "assistant",
-              "description": null,
-              "model": "gpt-3.5-turbo",
-              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
-              "tools": [
-                {
-                  "type": "code_interpreter"
-                }
-              ],
-              "file_ids": [],
-              "metadata": {}
-            },
-            {
-              "id": "asst_h8CzZHrSA6XI00T075PlHA9A",
-              "object": "assistant",
-              "created_at": 1701367155,
-              "name": "assistant",
-              "description": null,
-              "model": "gpt-3.5-turbo",
-              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
-              "tools": [
-                {
-                  "type": "code_interpreter"
-                }
-              ],
-              "file_ids": [],
-              "metadata": {}
-            },
-            {
-              "id": "asst_jaIFNZfVsMfXdvbbqad8ICuU",
-              "object": "assistant",
-              "created_at": 1701367078,
-              "name": "assistant",
-              "description": null,
-              "model": "gpt-3.5-turbo",
-              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
-              "tools": [
-                {
-                  "type": "code_interpreter"
-                }
-              ],
-              "file_ids": [],
-              "metadata": {}
-            },
-            {
-              "id": "asst_3si9gZR6deoXrl4YF7lGj1GO",
-              "object": "assistant",
-              "created_at": 1701367040,
-              "name": "assistant",
-              "description": null,
-              "model": "gpt-3.5-turbo",
-              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
-              "tools": [
-                {
-                  "type": "code_interpreter"
-                }
-              ],
-              "file_ids": [],
-              "metadata": {}
-            },
-            {
-              "id": "asst_nV94BYThUypoeFkmUAXfrIM5",
-              "object": "assistant",
-              "created_at": 1701367011,
-              "name": "assistant",
-              "description": null,
-              "model": "gpt-3.5-turbo",
-              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
-              "tools": [
-                {
-                  "type": "code_interpreter"
-                }
-              ],
-              "file_ids": [],
-              "metadata": {}
-            },
-            {
-              "id": "asst_HzVR8h1HUrwVwvkwh715RA1j",
-              "object": "assistant",
-              "created_at": 1701366985,
-              "name": "assistant",
-              "description": null,
-              "model": "gpt-3.5-turbo",
-              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
-              "tools": [
-                {
-                  "type": "code_interpreter"
-                }
-              ],
-              "file_ids": [],
-              "metadata": {}
-            },
-            {
-              "id": "asst_xOBkWQE2aQTq4WdztusgAWoy",
-              "object": "assistant",
-              "created_at": 1701366870,
-              "name": "assistant",
-              "description": null,
-              "model": "gpt-3.5-turbo",
-              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
-              "tools": [
-                {
-                  "type": "code_interpreter"
-                }
-              ],
-              "file_ids": [],
-              "metadata": {}
-            },
-            {
-              "id": "asst_4yRE8tVdjlsLfBA00pUBORUJ",
-              "object": "assistant",
-              "created_at": 1701366795,
-              "name": "assistant",
-              "description": null,
-              "model": "gpt-3.5-turbo",
-              "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
-              "tools": [
-                {
-                  "type": "code_interpreter"
-                }
-              ],
-              "file_ids": [],
-              "metadata": {}
-            },
-            {
-              "id": "asst_y5M163A0hMwcD6zy3BS9tyAr",
-              "object": "assistant",
-              "created_at": 1701366380,
-              "name": null,
-              "description": null,
-              "model": "gpt-3.5-turbo",
-              "instructions": null,
-              "tools": [],
-              "file_ids": [],
-              "metadata": {}
             }
           ],
-          "first_id": "asst_tpZ2lqS51dlZKnMpR1HTELu2",
-          "last_id": "asst_y5M163A0hMwcD6zy3BS9tyAr",
-          "has_more": false
+          "first_id": "asst_ORdKV3nCiN8WwtpfOqvpT3jn",
+          "last_id": "asst_zLvJkozSliPNazhe6nJlvNo2",
+          "has_more": true
         }
-  recorded_at: Fri, 01 Dec 2023 07:31:49 GMT
+  recorded_at: Fri, 01 Dec 2023 09:53:57 GMT
 recorded_with: VCR 6.2.0

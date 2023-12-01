@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Openai::Assistant do
-  subject { described_class.new("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") } # need to use real api first to generate the vcr_cassettes with real data
+  subject { described_class.new("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") } # need to use real api first to generate the vcr_cassettes with real data
   let(:model) { "gpt-3.5-turbo" }
   let(:instructions) { "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question." }
   let(:assistant) do # keep the response after create for another method like retrieve, delete,...
@@ -31,8 +31,8 @@ RSpec.describe Openai::Assistant do
         VCR.use_cassette("create_assistant_invalid") do
           model = "invalid_model"
           instructions = "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question."
-          err_msg = subject.create_assistant(model, instructions)
-          expect(err_msg).to eq "model_not_found"
+          err_resp = subject.create_assistant(model, instructions)
+          expect(err_resp.code).to eq "model_not_found"
         end
       end
     end
@@ -54,8 +54,8 @@ RSpec.describe Openai::Assistant do
       it "raises an error" do
         VCR.use_cassette("retrieve_assistant_invalid") do
           assistant_id = "invalid_id"
-          err_msg = subject.retrieve_assistant(assistant_id)
-          expect(err_msg).to eq nil
+          err_resp = subject.retrieve_assistant(assistant_id)
+          expect(err_resp.code).to eq nil
         end
       end
     end
@@ -88,8 +88,8 @@ RSpec.describe Openai::Assistant do
       it "raises an error" do
         VCR.use_cassette("delete_assistant_invalid") do
           assistant_id = "invalid_id"
-          err_msg = subject.delete_assistant(assistant_id)
-          expect(err_msg).to eq nil
+          err_resp = subject.delete_assistant(assistant_id)
+          expect(err_resp.code).to eq nil
         end
       end
     end

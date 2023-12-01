@@ -9,7 +9,7 @@ http_interactions:
         write and run Ruby code to answer the question.","name":"assistant","tools":[{"type":"code_interpreter"}],"model":"invalid_model"}'
     headers:
       Authorization:
-      - Bearer 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
+      - Bearer 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
       Openai-Beta:
       - assistants=v1
       Content-Type:
@@ -26,7 +26,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 01 Dec 2023 07:31:48 GMT
+      - Fri, 01 Dec 2023 09:53:56 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -38,23 +38,23 @@ http_interactions:
       Openai-Organization:
       - user-lr17ucjtedcdrdzslupysvb8
       X-Request-Id:
-      - 6eed3163f2d71f06fe3480531badfead
+      - e50c9c7b73178f470562d0f3706ad254
       Openai-Processing-Ms:
-      - '84'
+      - '98'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=YKh3qkqu.vt8N09pdx5tjNpgqw2feOutGVz63fNg6rc-1701415908-0-AbSEQkkmpy0ukyf9v/BW3tq/eUa3xBLluOwMfQKmx0aXaIN0SOvnMIkvMQMFt7QEdjw1HKdCYBb26kpa7zzYsdE=;
-        path=/; expires=Fri, 01-Dec-23 08:01:48 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=dYsxMzkQhkWjsaPA8.HBxw0ej4brt9eUJoSUeh8B4_Y-1701424436-0-AdLdQ2d2RFbDiB9kT2k1t+Yp5A+EnLP4f5ocEoevtUGNA/bNmc45aaLA1IqrofN+Jj2+cst/Bc0wtpvHNee3Jl8=;
+        path=/; expires=Fri, 01-Dec-23 10:23:56 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=wXMa6ZYPc9rFYHwYDk9CvvfhAgR3oALRcXnChh6aGv8-1701415908578-0-604800000;
+      - _cfuvid=qzNW23BgDCURSDTtqdeyjhXIfCNj4UnVyxfunTZvTKI-1701424436077-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 82e9a1f2bfe549c0-SIN
+      - 82ea722389b946e5-SIN
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -68,5 +68,5 @@ http_interactions:
             "code": "model_not_found"
           }
         }
-  recorded_at: Fri, 01 Dec 2023 07:31:48 GMT
+  recorded_at: Fri, 01 Dec 2023 09:53:56 GMT
 recorded_with: VCR 6.2.0

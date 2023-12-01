@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Bearer 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
+      - Bearer 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
       Openai-Beta:
       - assistants=v1
       Content-Type:
@@ -25,7 +25,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Fri, 01 Dec 2023 07:31:49 GMT
+      - Fri, 01 Dec 2023 09:53:56 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -37,23 +37,23 @@ http_interactions:
       Openai-Organization:
       - user-lr17ucjtedcdrdzslupysvb8
       X-Request-Id:
-      - 3847f931f3c46790c81c7494c9b5a9c2
+      - 53e3d64fd985434606d0673420ec0c74
       Openai-Processing-Ms:
-      - '67'
+      - '20'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=AnH.orMdYH7oP7APgGWvAEc0NvLx6emdQFnU1MwfsZ8-1701415909-0-AfsQXTrgWw0oABm8+ITvqUueaGmsfL8JpCFwDhnryGhEFM/LWdCd+jN1mkB1azhgB0RY85wk7dKuUief+nI9/jc=;
-        path=/; expires=Fri, 01-Dec-23 08:01:49 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=dca1lBwPEgzkfbDVgibrzXILmZRb9cdcSM7eZYb9ckU-1701424436-0-Ad1cie4ogdYzRTrso3QgPXgPtshCNtiZyl857H622O9YuiEeYGdvr1g3BRAgJn1PyV0luT4HC/cNFKKAtkro/VE=;
+        path=/; expires=Fri, 01-Dec-23 10:23:56 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=OLYifL_AIRyhBd0_Mj2R1h6WCnAZuDxz0CqoX6.IuRY-1701415909401-0-604800000;
+      - _cfuvid=7IKXkL24KIHZ6hPELvgP4Ccch60gDVpZ_eXrh7yD06E-1701424436859-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 82e9a1f7ed89464f-SIN
+      - 82ea7228ed3649ea-SIN
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -67,5 +67,5 @@ http_interactions:
             "code": null
           }
         }
-  recorded_at: Fri, 01 Dec 2023 07:31:49 GMT
+  recorded_at: Fri, 01 Dec 2023 09:53:56 GMT
 recorded_with: VCR 6.2.0

@@ -29,5 +29,20 @@ module Openai
         instance_variable_set("@#{k}", v) unless v.nil?
       end
     end
+
+    def self.from_json(data)
+      Openai::AssistantObj.new(
+        id: data["id"],
+        object: data["object"],
+        created_at: data["created_at"],
+        name: data["name"],
+        description: data["description"],
+        model: data["model"],
+        instructions: data["instructions"],
+        tools: data["tools"],
+        file_ids: data["file_ids"],
+        metadata: data["metadata"]
+      )
+    end
   end
 end
