@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Openai
+module OpenaiAsissistant
   module Assistant
     # An openai assistant
     class Delete < Base
@@ -10,7 +10,7 @@ module Openai
         url = "#{@openai_url}/#{assistant_id}"
         uri = URI(url)
         response = @http_client.call_delete(uri, default_headers)
-        return Openai::ErrorResponse.from_json(response.body) unless response.code == "200"
+        return OpenaiAsissistant::ErrorResponse.from_json(response.body) unless response.code == "200"
 
         true
       end

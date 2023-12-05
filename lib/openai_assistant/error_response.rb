@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Openai
+module OpenaiAsissistant
   # A error response of openai
   class ErrorResponse
     # @return [String] error message
@@ -20,7 +20,7 @@ module Openai
 
     def self.from_json(response_body)
       data = JSON.parse(response_body)["error"]
-      Openai::ErrorResponse.new(
+      OpenaiAsissistant::ErrorResponse.new(
         message: data["message"],
         type: data["type"],
         param: data["param"],

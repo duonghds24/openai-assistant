@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Openai
+module OpenaiAsissistant
   # A mapper of assistant
   module Mapper
     # A object model struct of assistant
@@ -33,7 +33,7 @@ module Openai
       end
 
       def self.from_json(data)
-        Openai::Mapper::Assistant.new(
+        OpenaiAsissistant::Mapper::Assistant.new(
           id: data["id"],
           object: data["object"],
           created_at: data["created_at"],

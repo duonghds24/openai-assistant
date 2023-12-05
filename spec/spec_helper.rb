@@ -15,9 +15,9 @@ RSpec.configure do |config|
   end
 end
 
-VCR.configure do |config|
-  config.cassette_library_dir = "spec/vcr_cassettes"
-  config.hook_into :webmock # or :faraday, :typhoeus, etc.
+# VCR.configure do |config|
+#   config.cassette_library_dir = "spec/vcr_cassettes"
+#   config.hook_into :webmock # or :faraday, :typhoeus, etc.
 
-  config.define_cassette_placeholder("<KP_TOKEN>") { "xyz" }
-end
+#   config.define_cassette_placeholder("<KP_TOKEN>") { "xyz" }
+# end
