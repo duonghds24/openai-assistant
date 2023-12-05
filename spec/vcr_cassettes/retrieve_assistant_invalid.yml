@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openai.com/v1/assistants/invalid_id
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <KP_TOKEN>
+      Openai-Beta:
+      - assistants=v1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Tue, 05 Dec 2023 07:50:26 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-lr17ucjtedcdrdzslupysvb8
+      X-Request-Id:
+      - 6d7e6761d8b4673cf64459f1fd69013b
+      Openai-Processing-Ms:
+      - '77'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=2HL5_8ZA1F.eDTTKQ27yzonjffC4qK4rCKteNcAQ94M-1701762626-0-AUscKoRNj9HLxmy9X+4yIWgeIUklxj3e+l2vr+ujrIUK4/j77EAbH0YYoWXpzyf2JziwutDq7B4oYvEPsFPUZfY=;
+        path=/; expires=Tue, 05-Dec-23 08:20:26 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=VbJMkAeoT_9oo_t_7azhmo_KBGBFhPIa2Vz6DukJHRU-1701762626702-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 830ab2bf1fb83fee-SIN
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "message": "No assistant found with id 'invalid_id'.",
+            "type": "invalid_request_error",
+            "param": null,
+            "code": null
+          }
+        }
+  recorded_at: Tue, 05 Dec 2023 07:50:26 GMT
+recorded_with: VCR 6.2.0
