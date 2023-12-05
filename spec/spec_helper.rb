@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-require "openai/base"
-require "openai/assistant"
+require "openai_assistant"
 require "vcr"
 
 RSpec.configure do |config|
@@ -19,4 +18,6 @@ end
 VCR.configure do |config|
   config.cassette_library_dir = "spec/vcr_cassettes"
   config.hook_into :webmock # or :faraday, :typhoeus, etc.
+
+  config.define_cassette_placeholder("<KP_TOKEN>") { "xyz" }
 end

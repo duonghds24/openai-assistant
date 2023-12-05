@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.openai.com/v1/assistants/asst_BrSJdHQUiM76v1VLLYfQrcVS
+    uri: https://api.openai.com/v1/assistants/asst_15s91ROJRaNgn5vvqMK1uS1E
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Authorization:
-      - Bearer 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
+      - Bearer <KP_TOKEN>
       Openai-Beta:
       - assistants=v1
       Content-Type:
@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 01 Dec 2023 09:53:56 GMT
+      - Tue, 05 Dec 2023 05:14:52 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -37,32 +37,32 @@ http_interactions:
       Openai-Organization:
       - user-lr17ucjtedcdrdzslupysvb8
       X-Request-Id:
-      - 86fe679e73c54f996641733288b115c4
+      - edbf69ae0fb89352b82ce5202f1c6a6b
       Openai-Processing-Ms:
-      - '78'
+      - '79'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=uVz0mF.8S.Z1ICJ4A9NTrf54ySnLnVXGLsYt2reKt0g-1701424436-0-AUdMMv8yemZUXHBZByfAUWda1DW8MF1i0cspy9NgLvZ5qZ6NcHaIakbH8tKdNbd44qElcc/N9CmX1TO0Y8We2ak=;
-        path=/; expires=Fri, 01-Dec-23 10:23:56 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=H3HMwXkFZWJWbemZNon3r6j1Rdp6orqUhGD9XRyF3mY-1701753292-0-AUE2EKe88aJXBsbDJFG8jQAQM4d95xIhBdMlIJmQY/LCX+ox3PKriboDfeaa88rjrhzWJKhz6pdcd+8rAp5U86w=;
+        path=/; expires=Tue, 05-Dec-23 05:44:52 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=vYYrVp59GrpQX2fTl8hcwWMxH7pFqD7m_cf8igMMcM8-1701424436485-0-604800000;
+      - _cfuvid=oFSNqkPGDVRdkiMHAgRFYONTLsWE7gUs9_6WmZbuMcM-1701753292705-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 82ea72263c6e4080-SIN
+      - 8309cedd88bd449a-SIN
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_BrSJdHQUiM76v1VLLYfQrcVS",
+          "id": "asst_15s91ROJRaNgn5vvqMK1uS1E",
           "object": "assistant",
-          "created_at": 1701424435,
+          "created_at": 1701753291,
           "name": "assistant",
           "description": null,
           "model": "gpt-3.5-turbo",
@@ -75,5 +75,5 @@ http_interactions:
           "file_ids": [],
           "metadata": {}
         }
-  recorded_at: Fri, 01 Dec 2023 09:53:56 GMT
+  recorded_at: Tue, 05 Dec 2023 05:14:52 GMT
 recorded_with: VCR 6.2.0

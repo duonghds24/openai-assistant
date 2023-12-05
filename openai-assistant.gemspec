@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require_relative "lib/openai/base"
-require_relative "lib/openai/assistant/version"
+require_relative "lib/openai_assistant/base"
+require_relative "lib/openai_assistant/version"
 
 Gem::Specification.new do |spec|
   spec.name = "openai-assistant"
-  spec.version = Openai::Assistant::VERSION
+  spec.version = Openai::VERSION
   spec.authors = ["duonghds"]
   spec.email = ["duong.hoang@employmenthero.com"]
 

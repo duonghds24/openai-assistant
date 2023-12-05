@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://api.openai.com/v1/assistants/asst_BrSJdHQUiM76v1VLLYfQrcVS
+    uri: https://api.openai.com/v1/assistants/asst_15s91ROJRaNgn5vvqMK1uS1E
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Authorization:
-      - Bearer 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
+      - Bearer <KP_TOKEN>
       Openai-Beta:
       - assistants=v1
       Content-Type:
@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 01 Dec 2023 09:53:57 GMT
+      - Tue, 05 Dec 2023 05:14:53 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -37,32 +37,32 @@ http_interactions:
       Openai-Organization:
       - user-lr17ucjtedcdrdzslupysvb8
       X-Request-Id:
-      - e9af7cf59939f2ed04e0d5ef2d2b498e
+      - 3652b312b7ee1c13db63684daf968099
       Openai-Processing-Ms:
-      - '84'
+      - '94'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=NjoGP20iyGrHvBuiy.OJ2C6qpa38i5XqZpRhPotyCus-1701424437-0-AXA7wg+K1nnYX8NdYCnn7SSnu6tiGfL38J/OLCZ5jl6BGuQ51kyOjhx3adTp1+Uw6WUw8pyAWtNnm3D/EAZJFMM=;
-        path=/; expires=Fri, 01-Dec-23 10:23:57 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=xWCcf7qbWkPurLUh4uxLfclX9Rn9CEKpwFaKgbZX4mU-1701753293-0-AbqnN6C4B7MIjRHG/vLsYdpXjQYNoPfSiRLR7TMoUYhnGc8XSiVjCc3D2Yxy+kTmxPQU2Ku9w1kvaskIDGsxbyM=;
+        path=/; expires=Tue, 05-Dec-23 05:44:53 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=25liTorqigmDIemk1qwToZZp6ZNVuqqWk6hYKs1N2w0-1701424437650-0-604800000;
+      - _cfuvid=jAI4mqYzKhM8dINV9cuIZBbu763sQHCQ_UOCABQYCYY-1701753293883-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 82ea722d4ea1448b-SIN
+      - 8309cee4ecea2ee3-SIN
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "asst_BrSJdHQUiM76v1VLLYfQrcVS",
+          "id": "asst_15s91ROJRaNgn5vvqMK1uS1E",
           "object": "assistant.deleted",
           "deleted": true
         }
-  recorded_at: Fri, 01 Dec 2023 09:53:57 GMT
+  recorded_at: Tue, 05 Dec 2023 05:14:53 GMT
 recorded_with: VCR 6.2.0

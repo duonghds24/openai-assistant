@@ -1,11 +1,8 @@
 # frozen_string_literal: true
 
-require "net/http"
-require "json"
-
-module Http
+module Openai
   # An http client
-  class Client
+  class HTTPClient
     # disable_ssl instead of ssl because almost the host is https
     def call_post(url, req_body, headers, disable_ssl: false)
       http = Net::HTTP.new(url.host, url.port)

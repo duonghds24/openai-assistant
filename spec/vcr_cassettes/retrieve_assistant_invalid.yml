@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Bearer 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
+      - Bearer <KP_TOKEN>
       Openai-Beta:
       - assistants=v1
       Content-Type:
@@ -25,7 +25,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Fri, 01 Dec 2023 09:53:56 GMT
+      - Tue, 05 Dec 2023 05:14:53 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -37,23 +37,23 @@ http_interactions:
       Openai-Organization:
       - user-lr17ucjtedcdrdzslupysvb8
       X-Request-Id:
-      - 53e3d64fd985434606d0673420ec0c74
+      - f866624aabfcf1c062e0b76208f48523
       Openai-Processing-Ms:
-      - '20'
+      - '16'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=dca1lBwPEgzkfbDVgibrzXILmZRb9cdcSM7eZYb9ckU-1701424436-0-Ad1cie4ogdYzRTrso3QgPXgPtshCNtiZyl857H622O9YuiEeYGdvr1g3BRAgJn1PyV0luT4HC/cNFKKAtkro/VE=;
-        path=/; expires=Fri, 01-Dec-23 10:23:56 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=Dp7TqI4kSkgecLNOZ4KbmrLx3bc70SlGjdWkLdfChEo-1701753293-0-Ae/905cdJKLoXKTzRY+8mxlAtw8thSlZgZQBU1JXCmfDDNnP9FXBoxxQ7/DNPCgLA/V8+8Yuc83GD7z89B8yfRk=;
+        path=/; expires=Tue, 05-Dec-23 05:44:53 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=7IKXkL24KIHZ6hPELvgP4Ccch60gDVpZ_eXrh7yD06E-1701424436859-0-604800000;
+      - _cfuvid=H5odsMKUzeCCrCJJJ2EN1i6EksvvnK3OgbmPzEgD4Oo-1701753293073-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 82ea7228ed3649ea-SIN
+      - 8309cee04f2d6028-SIN
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -67,5 +67,5 @@ http_interactions:
             "code": null
           }
         }
-  recorded_at: Fri, 01 Dec 2023 09:53:56 GMT
+  recorded_at: Tue, 05 Dec 2023 05:14:53 GMT
 recorded_with: VCR 6.2.0

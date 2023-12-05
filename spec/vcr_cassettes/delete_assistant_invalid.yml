@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Bearer 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
+      - Bearer <KP_TOKEN>
       Openai-Beta:
       - assistants=v1
       Content-Type:
@@ -25,7 +25,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Fri, 01 Dec 2023 09:53:58 GMT
+      - Tue, 05 Dec 2023 05:14:54 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -37,23 +37,23 @@ http_interactions:
       Openai-Organization:
       - user-lr17ucjtedcdrdzslupysvb8
       X-Request-Id:
-      - 5055d7e8de61f69092119c81d3f4e598
+      - a7744fe923999d2d921ee0ca2f6b80dd
       Openai-Processing-Ms:
-      - '18'
+      - '8'
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=DkfcrYsXFGunjRXEoltb56jjUmz8qOHUlQR2vYIaK6o-1701424438-0-AS+8JT3PriVTrog46swKvCUZb8HrI9+oc87XHw9mdW0gXq4r0QZmTWW7ZtznvNLXbRjLjcRSltgr6QQoGZNuOoY=;
-        path=/; expires=Fri, 01-Dec-23 10:23:58 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=F6Y_vgAplM4c4ncOC.Ty.BTmV8lbKAVG_tRghyHZ4xY-1701753294-0-AatIfHcIkXehHi0YzkqWpOMdVeDj8gAMvaSwdrBMkxjptYcMN/lX8XvXW8RYFQQ8u71sg3yVUJarkbzGVGhxdBQ=;
+        path=/; expires=Tue, 05-Dec-23 05:44:54 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=Nc4esGgATo_V_yGa7jf7GPJwL117V_fS7HASd4EeKDw-1701424438008-0-604800000;
+      - _cfuvid=JAUArswJb4fq6u8w0Bai3SXKp8.3SSdV9MGqTHfYs10-1701753294242-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 82ea72300d7b3e41-SIN
+      - 8309cee7a89640fa-SIN
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -67,5 +67,5 @@ http_interactions:
             "code": null
           }
         }
-  recorded_at: Fri, 01 Dec 2023 09:53:57 GMT
+  recorded_at: Tue, 05 Dec 2023 05:14:54 GMT
 recorded_with: VCR 6.2.0

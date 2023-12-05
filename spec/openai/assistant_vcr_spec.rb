@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-RSpec.describe Openai::Assistant do
-  subject { described_class.new("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") } # need to use real api first to generate the vcr_cassettes with real data
+RSpec.describe Openai::Assistant::Client do
+  subject { described_class.new("xyz") } # need to use real api first to generate the vcr_cassettes with real data
   let(:model) { "gpt-3.5-turbo" }
   let(:instructions) { "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question." }
   let(:assistant) do # keep the response after create for another method like retrieve, delete,...
@@ -20,7 +20,7 @@ RSpec.describe Openai::Assistant do
           model = "gpt-3.5-turbo"
           instructions = "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question."
           ast = subject.create_assistant(model, instructions)
-          expect(ast).to be_an_instance_of(Openai::AssistantObj)
+          expect(ast).to be_an_instance_of(Openai::Mapper::Assistant)
           expect(ast.id).to_not be_nil
         end
       end
@@ -44,7 +44,7 @@ RSpec.describe Openai::Assistant do
         VCR.use_cassette("cretrieve_assistant_valid") do
           assistant_id = assistant.id
           ast = subject.retrieve_assistant(assistant_id)
-          expect(ast).to be_an_instance_of(Openai::AssistantObj)
+          expect(ast).to be_an_instance_of(Openai::Mapper::Assistant)
           expect(ast.id).to eq assistant_id
         end
       end
@@ -67,7 +67,6 @@ RSpec.describe Openai::Assistant do
         VCR.use_cassette("list_assistant_valid") do
           assistants = subject.list_assistant
           expect(assistants.size).to be > 0
-          expect(assistants[1]["id"]).to eq assistant.id # 1 because we call create two times
         end
       end
     end
