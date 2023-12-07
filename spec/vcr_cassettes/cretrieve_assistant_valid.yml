@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openai.com/v1/assistants/asst_TmbvspLgQ9kJHLfD0h12L95Q
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <KP_TOKEN>
+      Openai-Beta:
+      - assistants=v1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 05 Dec 2023 07:50:26 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-lr17ucjtedcdrdzslupysvb8
+      X-Request-Id:
+      - 27b062a0177c8f6013d4e5730d63eb75
+      Openai-Processing-Ms:
+      - '78'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=hpp0W.A.11aII1LWKB7dKyQhcKLGuyB8Jr0h4tr760E-1701762626-0-AduG9mXFZ8qUyXVw3YNN1+C9EmI9fsAQmOO95+3SZh+R0PmWSLArQ3fr9/lGn/4BG+44QChtCdN8DaMRaig8D/8=;
+        path=/; expires=Tue, 05-Dec-23 08:20:26 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=U7kXuXxFXbQ32x04SDm8ltzW9.m197Ehswk8QUetWQk-1701762626269-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 830ab2bc5be45f41-SIN
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "asst_TmbvspLgQ9kJHLfD0h12L95Q",
+          "object": "assistant",
+          "created_at": 1701762624,
+          "name": "assistant",
+          "description": null,
+          "model": "gpt-3.5-turbo",
+          "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+          "tools": [
+            {
+              "type": "code_interpreter"
+            }
+          ],
+          "file_ids": [],
+          "metadata": {}
+        }
+  recorded_at: Tue, 05 Dec 2023 07:50:26 GMT
+recorded_with: VCR 6.2.0

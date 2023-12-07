@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/assistants
+    body:
+      encoding: UTF-8
+      string: '{"instructions":"You are a personal math tutor. When asked a question,
+        write and run Ruby code to answer the question.","name":"assistant","tools":[{"type":"code_interpreter"}],"model":"invalid_model"}'
+    headers:
+      Authorization:
+      - Bearer <KP_TOKEN>
+      Openai-Beta:
+      - assistants=v1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Tue, 05 Dec 2023 07:50:25 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '179'
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-lr17ucjtedcdrdzslupysvb8
+      X-Request-Id:
+      - dda8fa71c4246b5e840de41037f30acc
+      Openai-Processing-Ms:
+      - '90'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=poKgkePM.s_lJkwGXu74VuDvbDi8IClUQnweLaXn440-1701762625-0-AarYBk+GTEbvwjoyJ0q+jJcbPEzE3ognH7E3QgCeoSuci/+bObiIpRad76u6t3mNxc2AuD5UB09jmLEJVp6Mujk=;
+        path=/; expires=Tue, 05-Dec-23 08:20:25 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=l5f.waxWwYe3.O_g8BLFwzTotRoI0113bzjIqVrWGYo-1701762625852-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 830ab2b9b8035647-SIN
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "error": {
+            "message": "The requested model 'invalid_model' does not exist.",
+            "type": "invalid_request_error",
+            "param": "model",
+            "code": "model_not_found"
+          }
+        }
+  recorded_at: Tue, 05 Dec 2023 07:50:25 GMT
+recorded_with: VCR 6.2.0

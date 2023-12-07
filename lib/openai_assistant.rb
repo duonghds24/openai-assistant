@@ -1,0 +1,15 @@
+# frozen_string_literal: true
+
+require "json"
+require "net/http"
+require "uri"
+require_relative "openai_assistant/clients/http/http"
+require_relative "openai_assistant/mappers/assistant"
+require_relative "openai_assistant/error_response"
+require_relative "openai_assistant/version"
+require_relative "openai_assistant/base"
+require_relative "openai_assistant/client"
+require_relative "openai_assistant/clients/assistant/create"
+require_relative "openai_assistant/clients/assistant/retrieve"
+require_relative "openai_assistant/clients/assistant/delete"
+require_relative "openai_assistant/clients/assistant/list"

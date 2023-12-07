@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/assistants
+    body:
+      encoding: UTF-8
+      string: '{"instructions":"You are a personal math tutor. When asked a question,
+        write and run Ruby code to answer the question.","name":"assistant","tools":[{"type":"code_interpreter"}],"model":"gpt-3.5-turbo"}'
+    headers:
+      Authorization:
+      - Bearer <KP_TOKEN>
+      Openai-Beta:
+      - assistants=v1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 05 Dec 2023 07:50:24 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - user-lr17ucjtedcdrdzslupysvb8
+      X-Request-Id:
+      - 9bb915b9197837679e931b9b1a9cadbb
+      Openai-Processing-Ms:
+      - '140'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=lnve9gVHbwb7QGDkITa9VNNj3JabFcSmnziuU1WjC_M-1701762624-0-Acj2IYO7WSxE6M+VrdA9pasd27wIBSZrmkPPc7vzjEV6+iLZSeJsKnpK7JfRljuCrRd9RfIPzz11Be5ef4IlhKs=;
+        path=/; expires=Tue, 05-Dec-23 08:20:24 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=YEHtypYdhMZ6BkLSH5RnMXd9NlJHhXM5Zr36RjeVLhs-1701762624997-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 830ab2b41e796bca-SIN
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "asst_TmbvspLgQ9kJHLfD0h12L95Q",
+          "object": "assistant",
+          "created_at": 1701762624,
+          "name": "assistant",
+          "description": null,
+          "model": "gpt-3.5-turbo",
+          "instructions": "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question.",
+          "tools": [
+            {
+              "type": "code_interpreter"
+            }
+          ],
+          "file_ids": [],
+          "metadata": {}
+        }
+  recorded_at: Tue, 05 Dec 2023 07:50:25 GMT
+recorded_with: VCR 6.2.0

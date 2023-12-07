@@ -1,7 +1,7 @@
-# Openai::Assistant
+# OpenaiAsissistant::Assistant
 This project/gem is for Ruby interact with OpenAI Assistant throught rest api.
 
-The client to call is: `Openai::Assistant`
+The client to call is: `OpenaiAsissistant::Assistant`
 
 ## Installation
 Install throught RubyGems server by below step:
@@ -14,7 +14,7 @@ Install throught RubyGems server by below step:
 You can direct interact with gem by:
 
 - use the gem `require "openai/assistant"`
-- setup the api key `instance =Openai::Assistant::new(${API_KEY})`
+- setup the api key `instance =OpenaiAsissistant::Assistant::new(${API_KEY})`
 - interact with assistant: 
     + `instance.create_assistant(model, instruction)` 
 
