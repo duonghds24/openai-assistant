@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe OpenaiAsissistant::Assistant::List do
+RSpec.describe OpenaiAssistant::Assistant::List do
   let(:list_assistant) { described_class.new }
 
   describe "#list_assistant" do

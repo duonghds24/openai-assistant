@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module OpenaiAsissistant
+module OpenaiAssistant
   # An http client
   class HTTPClient
     # disable_ssl instead of ssl because almost the host is https

@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-module OpenaiAsissistant
-  VERSION = "1.0.0"
+module OpenaiAssistant
+  VERSION = "1.1.0"
 end

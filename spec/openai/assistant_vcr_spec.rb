@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe OpenaiAsissistant::Assistant::Client do
+RSpec.describe OpenaiAssistant::Assistant::Client do
   subject { described_class.new("xyz") } # need to use real api first to generate the vcr_cassettes with real data
   let(:model) { "gpt-3.5-turbo" }
   let(:instructions) { "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question." }
@@ -20,7 +20,7 @@ RSpec.describe OpenaiAsissistant::Assistant::Client do
           model = "gpt-3.5-turbo"
           instructions = "You are a personal math tutor. When asked a question, write and run Ruby code to answer the question."
           ast = subject.create_assistant(model, instructions)
-          expect(ast).to be_an_instance_of(OpenaiAsissistant::Mapper::Assistant)
+          expect(ast).to be_an_instance_of(OpenaiAssistant::Mapper::Assistant)
           expect(ast.id).to_not be_nil
         end
       end
@@ -44,7 +44,7 @@ RSpec.describe OpenaiAsissistant::Assistant::Client do
         VCR.use_cassette("cretrieve_assistant_valid") do
           assistant_id = assistant.id
           ast = subject.retrieve_assistant(assistant_id)
-          expect(ast).to be_an_instance_of(OpenaiAsissistant::Mapper::Assistant)
+          expect(ast).to be_an_instance_of(OpenaiAssistant::Mapper::Assistant)
           expect(ast.id).to eq assistant_id
         end
       end

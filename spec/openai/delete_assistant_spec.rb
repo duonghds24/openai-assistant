@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe OpenaiAsissistant::Assistant::Delete do
+RSpec.describe OpenaiAssistant::Assistant::Delete do
   let(:assistant_id) { "assistant_id" }
   let(:delete_assistant) { described_class.new }
 
@@ -36,7 +36,7 @@ RSpec.describe OpenaiAsissistant::Assistant::Delete do
 
         result = delete_assistant.delete_assistant(assistant_id)
 
-        expect(result).to be_an_instance_of(OpenaiAsissistant::ErrorResponse)
+        expect(result).to be_an_instance_of(OpenaiAssistant::ErrorResponse)
       end
     end
   end
